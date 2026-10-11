@@ -1,0 +1,322 @@
+.pokelist-container {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pokelistmain {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 26px 60px;
+}
+
+.pokelist-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.pokelist-text span {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--pokelist-label);
+    white-space: nowrap;
+    margin-bottom: 18px;
+}
+
+.pokelist-text h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--pokelist-heading);
+    margin: 0 0 8px 0;
+}
+
+.pokelist-text p {
+    font-size: 1rem;
+    color: var(--pokelist-description);
+    margin: 0;
+}
+
+.pokeList-Pokenumber {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.pokeList-Pokenumber span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--pokelist-heading);
+    line-height: 1;
+}
+
+.pokeList-Pokenumber h5 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--pokelist-description);
+    margin: 8px 0 0 0;
+}
+
+
+.list-input-main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 10px 12px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    gap: 0;
+
+    background: var(--pokemon-card-bg);
+    border-radius: 999px;
+    box-shadow: 0 2px 12px rgba(20, 24, 50, 0.08);
+}
+
+.search-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px;
+    margin-right: 12px;
+    background: var(--hero-input-bg);
+    border-radius: 999px;
+}
+
+.search-box>svg {
+    font-size: 20px;
+    color: #6b7084;
+    flex-shrink: 0;
+}
+
+.PokeList-input {
+    flex: 1;
+}
+
+.PokeList-input input {
+    font-size: 1rem;
+    color: var(--hero-input-text);
+    padding: 0;
+}
+
+.PokeList-input input::placeholder {
+    color: var(--hero-input-placeholder);
+    opacity: 1;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 16px;
+    border-left: 1px solid var(--pokemon-card-border);
+}
+
+.filter-group label {
+    font-size: 0.75rem;
+    color: var(--pokelist-description);
+    white-space: nowrap;
+}
+
+.filter-group select {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--hero-input-text);
+    min-width: 110px;
+    padding: 4px 24px 4px 0;
+    background: transparent;
+}
+
+.filter-group select:focus {
+    background: transparent;
+}
+
+.pokemonListShower {
+    width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+.filter-group .filter-select,
+.filter-group .filter-select .MuiNativeSelect-select {
+    color: var(--hero-input-text) !important;
+    background-color: var(--pokemon-card-bg) !important;
+}
+
+.filter-group .filter-select option {
+    color: var(--hero-input-text) !important;
+    background-color: var(--pokemon-card-bg) !important;
+}
+
+.filter-group .filter-select .MuiNativeSelect-icon {
+    color: var(--hero-input-icon) !important;
+}
+
+@media screen and (max-width: 1024px) {
+    .pokelistmain {
+        padding: 22px 30px;
+        gap: 15px;
+    }
+
+    .pokelist-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .pokelist-text span {
+        font-size: 11px;
+        margin-bottom: 12px;
+    }
+
+    .pokelist-text p {
+        font-size: 0.85rem;
+    }
+
+    .pokeList-Pokenumber span {
+        font-size: 1.3rem;
+    }
+
+    .pokeList-Pokenumber h5 {
+        font-size: 0.85rem;
+    }
+
+    .list-input-main {
+        width: calc(100% - 50px);
+        padding: 8px 10px;
+    }
+
+    .search-box {
+        gap: 8px;
+        padding: 7px 12px;
+        margin-right: 8px;
+    }
+
+    .filter-group {
+        gap: 6px;
+        padding: 0 10px;
+    }
+
+    .filter-group label {
+        font-size: 11px;
+    }
+
+    .filter-group select {
+        min-width: 80px;
+        font-size: 13px;
+        padding-right: 10px;
+    }
+
+    .pokemonListShower {
+        grid-template-columns: repeat(auto-fill,
+                minmax(200px, 1fr));
+        gap: 15px;
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pokelistmain {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 15px;
+        gap: 8px;
+    }
+
+    .pokelist-text {
+        min-width: 0;
+    }
+
+    .pokelist-text span {
+        font-size: 8px;
+        margin-bottom: 8px;
+    }
+
+    .pokelist-text h2 {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+
+    .pokelist-text p {
+        font-size: 0.7rem;
+    }
+
+    .pokeList-Pokenumber {
+        flex-shrink: 0;
+    }
+
+    .pokeList-Pokenumber span {
+        font-size: 1.1rem;
+    }
+
+    .pokeList-Pokenumber h5 {
+        font-size: 0.7rem;
+        margin-top: 5px;
+    }
+
+    .list-input-main {
+        width: calc(100% - 24px);
+        flex-direction: row;
+        flex-wrap: nowrap;
+        padding: 6px;
+        margin: 12px auto;
+        border-radius: 999px;
+    }
+
+    .search-box {
+        flex: 1;
+        min-width: 0;
+        padding: 6px 8px;
+        gap: 6px;
+        margin-right: 5px;
+    }
+
+    .search-box>svg {
+        font-size: 16px;
+    }
+
+    .PokeList-input {
+        min-width: 0;
+    }
+
+    .PokeList-input input {
+        font-size: 12px;
+    }
+
+    .filter-group {
+        flex-shrink: 0;
+        gap: 4px;
+        padding: 0 4px 0 7px;
+        border-left: 1px solid #e3e5ee;
+        border-top: none;
+    }
+
+    .filter-group label {
+        font-size: 10px;
+    }
+
+    .filter-group select {
+        min-width: 0;
+        max-width: 75px;
+        font-size: 11px;
+        padding: 4px 12px 4px 0;
+    }
+
+    .pokemonListShower {
+        grid-template-columns: repeat(auto-fill,
+                minmax(140px, 1fr));
+        gap: 10px;
+        padding: 12px;
+    }
+}

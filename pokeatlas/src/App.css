@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    background-color: var(--bg);
+    color: var(--text-color);
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.main-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+:root {
+    --bg: #eaebfe;
+    --navbar-bg: #ffffff;
+    --logo-color: #1f2133;
+    --icon-color: #000000;
+
+    --hero-badge-bg: linear-gradient(135deg, #e8e8fb, #dcdcf8);
+    --hero-badge-border: rgba(99, 102, 241, 0.15);
+    --hero-heading-color: #000000;
+
+    --hero-input-bg: #ffffff;
+    --hero-input-text: #151826;
+    --hero-input-placeholder: #757575;
+    --hero-input-icon: #151826;
+    --hero-input-border: #dcdcf8;
+
+    --pokelist-label: #5b5bd6;
+    --pokelist-heading: #151826;
+    --pokelist-description: #6b7084;
+
+    --modal-bg: #ffffff;
+    --modal-info-bg: #f7f7f7;
+    --modal-muted: #999999;
+    --modal-progress-bg: #eeeeee;
+    --modal-error-bg: #fff0f0;
+    --modal-error-text: #d95353;
+    --modal-error-border: #ffd0d0;
+
+    --pokemon-card-bg: #ffffff;
+    --pokemon-card-border: #eeeeee;
+    --card-stats-border: #eeeeee;
+    --card-stats-muted: #888888;
+
+    --footer-bg: #ffffff;
+    --footer-border: #ececec;
+    --footer-logo-color: #111111;
+    --footer-accent: #ef6262;
+    --footer-muted: #6b7280;
+
+    --page-bg: #ffffff;
+    --text-color: #151826;
+}
+
+/* KARANLIK TEMA */
+:root[data-theme="dark"] {
+    --bg: #12141c;
+    --navbar-bg: #171a24;
+    --logo-color: #f1f3f9;
+    --icon-color: #f1f3f9;
+
+    --hero-badge-bg: linear-gradient(135deg, #292943, #24243b);
+    --hero-badge-border: rgba(155, 156, 255, 0.25);
+    --hero-heading-color: #f5f6fc;
+
+    --hero-input-bg: #1c202c;
+    --hero-input-text: #f1f3f9;
+    --hero-input-placeholder: #a5adbd;
+    --hero-input-icon: #f1f3f9;
+    --hero-input-border: #343949;
+
+    --pokelist-label: #a5a6ff;
+    --pokelist-heading: #f1f3f9;
+    --pokelist-description: #a5adbd;
+
+    --pokemon-card-bg: #1c202c;
+    --pokemon-card-border: #343949;
+    --card-stats-border: #343949;
+    --card-stats-muted: #a0a7b5;
+
+    --modal-bg: #1c202c;
+    --modal-info-bg: #282e3b;
+    --modal-muted: #a5adbd;
+    --modal-progress-bg: #3a4150;
+    --modal-error-bg: #382326;
+    --modal-error-text: #ff9292;
+    --modal-error-border: #63363b;
+
+    --footer-bg: #171a24;
+    --footer-border: #343949;
+    --footer-logo-color: #f1f3f9;
+    --footer-accent: #ff8585;
+    --footer-muted: #a5adbd;
+
+    --page-bg: #12141c;
+    --text-color: #f1f3f9;
+}
